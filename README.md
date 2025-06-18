@@ -1,13 +1,68 @@
-# Portfolio-Website
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anusha J | Data Analyst Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto Mono', monospace;
+      background-color: #0a192f;
+      color: #ccd6f6;
+    }
+    header {
+      background-color: #112240;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      margin: 0;
+      color: #64ffda;
+      font-size: 32px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #ccd6f6;
+      font-weight: bold;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    section h2 {
+      color: #64ffda;
+      font-size: 28px;
+      border-bottom: 2px solid #64ffda;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .project {
+      margin-bottom: 40px;
+    }
+    a {
+      color: #64ffda;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #112240;
+      color: #8892b0;
+    }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
