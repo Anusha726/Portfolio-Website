@@ -23,41 +23,59 @@
       font-family: 'Roboto Mono', monospace;
       background-color: var(--main-bg);
       color: var(--text-main);
-      display: flex;
     }
-    aside {
-      background-color: var(--nav-bg);
-      width: 250px;
-      height: 100vh;
-      padding: 40px 20px;
+    header {
       position: fixed;
-    }
-    aside h1 {
-      color: var(--accent);
-      font-size: 24px;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    aside nav ul {
-      list-style: none;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--nav-bg);
+      z-index: 1000;
+      padding: 15px 20px;
       display: flex;
-      flex-direction: column;
-      gap: 20px;
+      justify-content: space-between;
       align-items: center;
     }
-    aside nav a {
-      text-decoration: none;
-      color: var(--text-main);
-      font-weight: bold;
-      transition: color 0.3s;
+    header h1 {
+      color: var(--accent);
+      font-size: 20px;
     }
-    aside nav a:hover {
+    .menu-toggle {
+      font-size: 20px;
+      background: none;
+      border: none;
+      color: var(--text-main);
+      cursor: pointer;
+    }
+    nav {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: var(--nav-bg);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    nav.show {
+      display: flex;
+    }
+    nav a {
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 18px;
+    }
+    nav a:hover {
       color: var(--accent);
     }
     main {
-      margin-left: 250px;
-      padding: 60px 40px;
+      margin-top: 120px;
+      padding: 0 20px;
       max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
     section {
       margin-bottom: 80px;
@@ -71,6 +89,7 @@
     }
     .intro {
       margin-bottom: 60px;
+      text-align: center;
     }
     .intro h2 {
       font-size: 32px;
@@ -80,10 +99,6 @@
     .intro p {
       font-size: 18px;
       color: var(--text-light);
-    }
-    p, li {
-      color: var(--text-light);
-      line-height: 1.6;
     }
     .project {
       margin-bottom: 30px;
@@ -111,17 +126,17 @@
   </style>
 </head>
 <body>
-  <aside>
+  <header>
     <h1>Anusha J</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </aside>
+    <button class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('show')">☰ Menu</button>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <main>
     <section class="intro">
@@ -190,3 +205,4 @@
   </main>
 </body>
 </html>
+
